@@ -32,7 +32,7 @@ class Board {
             Checker(Color.BLACK),
             Checker(Color.BLACK),
             Checker(Color.BLACK),
-            Checker(Color.WHITE),
+            Checker(Color.BLACK),
             Checker(Color.BLACK)
         ),
         mutableListOf(),
@@ -65,30 +65,41 @@ class Board {
 
                 if (!daska[i].isEmpty() ) {
                     try {
-                        print(" (${daska[i][j].color.letter}) ")
+                        print("(${daska[i][j].color.letter})")
                     }catch (e:IndexOutOfBoundsException){
                         print("   ")
                     }
                 } else {
-                    print("   ")
+                    print("  ")
                 }
             }
             print("| |")
             println()
         }
-//        println()
-//        println()
-//        println()
-//        for (i in 23 downTo 12) {
-//            if (i == 17) {
-//                print(" ")
-//            }
-//            if (!daska[i].isEmpty()) {
-//                print("(${daska[i][0].color.letter})")
-//            } else {
-//                print("E")
-//            }
-//        }
+
+        println()
+
+        for(j in 4 downTo 0) {
+            print("| |")
+            for (i in 23 downTo 12) {
+                if (i == 17) {
+                    print(" ")
+                }
+
+                if (!daska[i].isEmpty() ) {
+                    try {
+                        print("(${daska[i][j].color.letter})")
+                    }catch (e:IndexOutOfBoundsException){
+                        //TODO change the print value to an empty space that inlines the board
+                        print("   ")
+                    }
+                } else {
+                    print("  ")
+                }
+            }
+            print("| |")
+            println()
+        }
     }
 
 
