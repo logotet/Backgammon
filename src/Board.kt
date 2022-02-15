@@ -1,5 +1,6 @@
 class Board {
 
+    //TODO() change the checker lists with stacks
     val daska = mutableListOf(
         mutableListOf(Checker(Color.WHITE), Checker(Color.WHITE)),
         mutableListOf(),
@@ -56,17 +57,16 @@ class Board {
     )
 
     fun printBoard() {
-        for(j in 0..4) {
+        for (j in 0..4) {
             print("| |")
             for (i in 0..11) {
                 if (i == 6) {
                     print(" ")
                 }
-
-                if (!daska[i].isEmpty() ) {
+                if (!daska[i].isEmpty()) {
                     try {
                         print("(${daska[i][j].color.letter})")
-                    }catch (e:IndexOutOfBoundsException){
+                    } catch (e: IndexOutOfBoundsException) {
                         print("   ")
                     }
                 } else {
@@ -79,18 +79,17 @@ class Board {
 
         println()
 
-        for(j in 4 downTo 0) {
+        for (j in 4 downTo 0) {
             print("| |")
             for (i in 23 downTo 12) {
                 if (i == 17) {
                     print(" ")
                 }
 
-                if (!daska[i].isEmpty() ) {
+                if (!daska[i].isEmpty()) {
                     try {
                         print("(${daska[i][j].color.letter})")
-                    }catch (e:IndexOutOfBoundsException){
-                        //TODO change the print value to an empty space that inlines the board
+                    } catch (e: IndexOutOfBoundsException) {
                         print("   ")
                     }
                 } else {
