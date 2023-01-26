@@ -1,7 +1,9 @@
+package game.items
+
 import kotlin.random.Random
 
 class Dice {
-    fun rollDices(): Array<Int> {
+    fun roll(): Array<Int> {
         return arrayOf(rollDice(), rollDice())
     }
 

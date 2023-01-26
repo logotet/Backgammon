@@ -1,6 +1,10 @@
+package game.items
+
+import game.items.utils.Color
+
 class Board {
 
-    //TODO() change the checker lists with stacks
+    //TODO change the checker lists with stacks
     val daska = mutableListOf(
         mutableListOf(Checker(Color.WHITE), Checker(Color.WHITE)),
         mutableListOf(),
@@ -63,7 +67,7 @@ class Board {
                 if (i == 6) {
                     print(" ")
                 }
-                if (!daska[i].isEmpty()) {
+                if (daska[i].isNotEmpty()) {
                     try {
                         print("(${daska[i][j].color.letter})")
                     } catch (e: IndexOutOfBoundsException) {
@@ -86,7 +90,7 @@ class Board {
                     print(" ")
                 }
 
-                if (!daska[i].isEmpty()) {
+                if (daska[i].isNotEmpty()) {
                     try {
                         print("(${daska[i][j].color.letter})")
                     } catch (e: IndexOutOfBoundsException) {
@@ -100,6 +104,4 @@ class Board {
             println()
         }
     }
-
-
 }

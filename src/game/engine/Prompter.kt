@@ -1,3 +1,5 @@
+package game.engine
+
 class Prompter {
     fun invalidMove(){
         println("Invalid move!")
@@ -15,4 +17,9 @@ class Prompter {
         println("Roll the dice? Y|N?")
     }
 
+
+    companion object{
+        const val COMMAND_ROLL = "roll"
+        const val COMMAND_EXIT = "exit"
+    }
 }
